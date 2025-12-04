@@ -1,0 +1,138 @@
+<html>
+<head>
+    <title>College Attendance Management System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"></link>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="font-roboto bg-gray-100">
+    <div class="container mx-auto p-4">
+        <header class="flex justify-between items-center py-4">
+            <h1 class="text-2xl font-bold">College Attendance Management System</h1>
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a href="#" class="text-blue-500">Home</a></li>
+                    <li><a href="#" class="text-blue-500">Students</a></li>
+                    <li><a href="#" class="text-blue-500">Subjects</a></li>
+                    <li><a href="#" class="text-blue-500">Timetable</a></li>
+                    <li><a href="#" class="text-blue-500">Attendance</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="mb-8">
+                <h2 class="text-xl font-semibold mb-4">Add Students</h2>
+                <form class="bg-white p-4 rounded shadow-md">
+                    <div class="mb-4">
+                        <label for="studentName" class="block text-gray-700">Student Name</label>
+                        <input type="text" id="studentName" class="w-full p-2 border border-gray-300 rounded mt-1">
+                    </div>
+                    <div class="mb-4">
+                        <label for="studentID" class="block text-gray-700">Student ID</label>
+                        <input type="text" id="studentID" class="w-full p-2 border border-gray-300 rounded mt-1">
+                    </div>
+                    <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Add Student</button>
+                </form>
+            </section>
+
+            <section class="mb-8">
+                <h2 class="text-xl font-semibold mb-4">Add Subjects</h2>
+                <form class="bg-white p-4 rounded shadow-md">
+                    <div class="mb-4">
+                        <label for="subjectName" class="block text-gray-700">Subject Name</label>
+                        <input type="text" id="subjectName" class="w-full p-2 border border-gray-300 rounded mt-1">
+                    </div>
+                    <div class="mb-4">
+                        <label for="subjectCode" class="block text-gray-700">Subject Code</label>
+                        <input type="text" id="subjectCode" class="w-full p-2 border border-gray-300 rounded mt-1">
+                    </div>
+                    <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Add Subject</button>
+                </form>
+            </section>
+
+            <section class="mb-8">
+                <h2 class="text-xl font-semibold mb-4">Timetable</h2>
+                <form class="bg-white p-4 rounded shadow-md">
+                    <div class="mb-4">
+                        <label for="day" class="block text-gray-700">Day</label>
+                        <select id="day" class="w-full p-2 border border-gray-300 rounded mt-1">
+                            <option>Monday</option>
+                            <option>Tuesday</option>
+                            <option>Wednesday</option>
+                            <option>Thursday</option>
+                            <option>Friday</option>
+                            <option>Saturday</option>
+                        </select>
+                    </div>
+                    <div class="mb-4">
+                        <label for="subject" class="block text-gray-700">Subject</label>
+                        <select id="subject" class="w-full p-2 border border-gray-300 rounded mt-1">
+                            <option>Math-IV</option>
+                            <option>C.O.A</option>
+                            <option>D.S.A</option>
+                            <option>DISCRETE MATH</option>
+                            <option>PYTHON</option>
+                            <option>TECHNICAL COMMUNICATION</option>
+                            <option>WEB-DESIGNING LAB</option>
+                            <option>COA LAB</option>
+                            <option>DSA LAB</option>
+                        </select>
+                    </div>
+                    <div class="mb-4">
+                        <label for="time" class="block text-gray-700">Time</label>
+                        <input type="time" id="time" class="w-full p-2 border border-gray-300 rounded mt-1">
+                    </div>
+                    <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Add to Timetable</button>
+                </form>
+            </section>
+
+            <section>
+                <h2 class="text-xl font-semibold mb-4">Mark Attendance</h2>
+                <form class="bg-white p-4 rounded shadow-md">
+                    <div class="mb-4">
+                        <label for="attendanceDate" class="block text-gray-700">Date</label>
+                        <input type="date" id="attendanceDate" class="w-full p-2 border border-gray-300 rounded mt-1">
+                    </div>
+                    <div class="mb-4">
+                        <label for="attendanceSubject" class="block text-gray-700">Subject</label>
+                        <select id="attendanceSubject" class="w-full p-2 border border-gray-300 rounded mt-1">
+                            <option>Math-IV</option>
+                            <option>C.O.A</option>
+                            <option>D.S.A</option>
+                            <option>DISCRETE MATH</option>
+                            <option>PYTHON</option>
+                            <option>TECHNICAL COMMUNICATION</option>
+                            <option>WEB-DESIGNING LAB</option>
+                            <option>COA LAB</option>
+                            <option>DSA LAB</option>
+                        </select>
+                    </div>
+                    <div class="mb-4">
+                        <label for="studentList" class="block text-gray-700">Students</label>
+                        <div id="studentList" class="space-y-2">
+                            <div class="flex items-center">
+                                <input type="checkbox" id="student1" class="mr-2">
+                                <label for="student1" class="text-gray-700">SHASHANK SINGH</label>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="checkbox" id="student2" class="mr-2">
+                                <label for="student2" class="text-gray-700">PRAKHAR RAI</label>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="checkbox" id="student3" class="mr-2">
+                                <label for="student3" class="text-gray-700">ANURAG NAG</label>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="checkbox" id="student4" class="mr-2">
+                                <label for="student4" class="text-gray-700">SHUBH GUPTA</label>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Mark Attendance</button>
+                </form>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
